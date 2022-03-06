@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.15678391959798996" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1242.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.represc.gui.MainView">
+   <items>
+      <VBox prefHeight="200.0" prefWidth="141.0" styleClass="pane" stylesheets="@Main.css">
+         <children>
+            <Label text="Assets">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <TreeView prefHeight="517.0" prefWidth="141.0" stylesheets="@Main.css" VBox.vgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets right="1.0" />
+         </padding>
+      </VBox>
+      <StackPane>
+         <children>
+            <TabPane id="Workspace" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="50.0" tabMaxWidth="50.0" tabMinHeight="50.0" tabMinWidth="50.0">
+              <tabs>
+                <Tab fx:id="representTab" closable="false" />
+                <Tab fx:id="verifyTab" />
+                  <Tab fx:id="simulateTab">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="81.0" StackPane.alignment="BOTTOM_RIGHT">
+               <items>
+                  <VBox alignment="CENTER" prefHeight="69.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="7.0">
+                           <children>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#newRoom" text="Room">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#newDoor" text="Door">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#newLock" text="Lock">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#newKey" text="Key">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" text="Others">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Objects" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" />
+                  <VBox alignment="CENTER" prefHeight="69.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="7.0">
+                           <children>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#newPlayer" text="Player">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#newStaff" text="Staff">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Person" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" />
+                  <VBox alignment="CENTER" prefHeight="69.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="7.0">
+                           <children>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#newHint" text="Hint">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#newCountdown" text="Countdown">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#newTask" text="Task">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#newEvent" text="Event">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Objects" textAlignment="CENTER" visible="false" />
+                     </children>
+                  </VBox>
+               </items></ToolBar>
+         </children>
+      </StackPane>
+   </items>
+</SplitPane>

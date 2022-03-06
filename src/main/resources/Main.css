@@ -1,0 +1,81 @@
+
+.root{
+/*======================================== COLORS ========================================*/
+    background-white : #FAFAFA  ;
+    background-grey : #F5F5F5 ;
+
+    theme-mango : #FFC130 ;
+    theme-mango-dark: #F5AB00;
+    outlines: #2B2D42;
+
+
+
+    -fx-base : background-white;
+    -fx-background-color : background-grey;
+    -fx-font-size: 10pt
+}
+
+
+.tree-view{
+    -fx-background-color: transparent;
+}
+
+.pane{
+    -fx-background-color: background-grey;
+    -fx-background-radius: 2;
+    -fx-border-width : 3px;
+    -fx-border-radius: 2;
+    -fx-border-color : outlines;
+}
+
+.split-pane-divider {
+   -fx-background-color: transparent;
+}
+
+
+.button{
+    -fx-background-radius: 3;
+    -fx-background-color: theme-mango;
+    -fx-border-radius:3;
+    -fx-border-width :2 ;
+    -fx-border-color : outlines;
+}
+
+.button:hover{
+    -fx-background-color: theme-mango-dark;
+    -fx-cursor:hand;
+}
+
+.hyperlink{
+    -fx-text-fill: theme-mango-dark;
+    -fx-font-size: 12pt;
+}
+
+/********************Mainview apppearance*************/
+.tab-pane > .tab-header-area{
+    -fx-pref-height: 80px;
+}
+
+.tab {
+    -fx-pref-height: 70px;
+
+}
+
+/*top-center because inverted**/
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-alignment: center;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width: 60px;
+}
+
+.tab .tab-label
+{
+    -fx-alignment: center;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+}

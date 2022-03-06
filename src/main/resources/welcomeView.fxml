@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+           prefWidth="1126.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.represc.gui.WelcomeView">
+    <Rectangle fx:id="backGrid" arcHeight="5.0" arcWidth="5.0" height="5000.0" width="5000.0"
+               StackPane.alignment="CENTER"/>
+    <BorderPane maxHeight="400.0" maxWidth="750.0" minHeight="400.0" minWidth="750.0" prefHeight="400.0"
+                prefWidth="750.0" styleClass="pane" stylesheets="@Main.css">
+        <left>
+            <VBox alignment="BASELINE_LEFT" prefHeight="400.0" prefWidth="249.0" BorderPane.alignment="CENTER">
+                <HBox alignment="CENTER_LEFT" prefHeight="124.0" prefWidth="251.0" spacing="20.0">
+                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc130" height="100.0" stroke="BLACK"
+                               strokeType="INSIDE" width="100.0"/>
+                    <Text fx:id="test" strokeType="OUTSIDE" strokeWidth="0.0" text="REPR-ESC"/>
+                </HBox>
+                <VBox prefHeight="100.0" prefWidth="235.0" spacing="15.0">
+                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                            mnemonicParsing="false" onAction="#switchToMainViewNew" prefHeight="35.0" prefWidth="150.0"
+                            text="%welcome.button.new"/>
+                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                            mnemonicParsing="false" onAction="#switchToMainViewLoad" prefHeight="35.0" prefWidth="150.0"
+                            text="%welcome.button.load"/>
+                </VBox>
+                <padding>
+                    <Insets top="10.0"/>
+                </padding>
+            </VBox>
+        </left>
+        <padding>
+            <Insets left="20.0"/>
+        </padding>
+        <right>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="242.0" spacing="15.0" BorderPane.alignment="CENTER">
+                <children>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%welcome.text.description"/>
+                    <Text layoutX="120.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                          text="%welcome.text.help"/>
+                    <Hyperlink text="Hyperlink"/>
+                </children>
+            </VBox>
+        </right>
+    </BorderPane>
+</StackPane>

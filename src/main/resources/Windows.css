@@ -1,0 +1,57 @@
+.root{
+/*======================================== COLORS ========================================*/
+    background-white : #FAFAFA  ;
+    background-grey : #F5F5F5 ;
+
+    theme-mango : #FFC130 ;
+    theme-mango-dark: #F5AB00;
+    outlines: #2B2D42;
+
+
+
+    -fx-base : background-white;
+    -fx-background-color : background-grey;
+    -fx-font-size: 10pt;
+}
+
+/***Paddings***/
+#window>VBox, #window>HBox {
+    -fx-padding: 0 0 15 0 ;
+    -fx-spacing: 3;
+}
+#bottom{
+    -fx-padding: 20 0 0 0;
+}
+#window{
+    -fx-padding: 15 ;
+    -fx-border-width: 3;
+    -fx-border-color:outlines;
+    -fx-border-radius:5;
+}
+#header{
+    -fx-padding: 0 0 15 0;
+}
+/*****paddings end******/
+
+.button{
+    -fx-background-radius: 3;
+    -fx-background-color: theme-mango;
+    -fx-border-radius:3;
+    -fx-border-width:2 ;
+    -fx-border-color:outlines;
+}
+
+.button:hover{
+    -fx-background-color: theme-mango-dark;
+    -fx-cursor:hand;
+}
+
+.text-field, .text-area{
+    -fx-border-width:1;
+    -fx-border-radius:2;
+    -fx-border-color:outlines;
+}
+
+
+
+
